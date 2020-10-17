@@ -13,8 +13,10 @@ def generateRan():
     randomDigit2 = random.randint(1,9)
     correctAnswer = randomDigit1 * randomDigit2
     userAnswer = int(input(f'How much is {randomDigit1} times {randomDigit2} ?'))
-    if userAnswer == correctAnswer:
-        print('done')
+    
+    while userAnswer != correctAnswer:
+        userAnswer = int(input(f'{randomDigit1} times {randomDigit2} is not {userAnswer}, please try again:'))
     else:
-        print(randomDigit1, 'times', randomDigit2, 'is not', userAnswer, ", please try again:")
-generateRan()    
+        print('done')
+generateRan() 
+           
