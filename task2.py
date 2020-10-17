@@ -6,29 +6,15 @@
 #Otherwise, if the user input 20, prompt: “3 times 7 is not 20, please try again: “
 #Keep asking the user input until it type the correct answer.
 
- 
 import random
-randomDigit1 = random.randint(1,9)
-randomDigit2 = random.randint(1,9)
-print(randomDigit1, randomDigit2)
 
-
-correctAnswer = randomDigit1 * randomDigit2
- 
-userAnswer = int(input(f'How much is {randomDigit1} times {randomDigit2} ?'))
- 
-if userAnswer == correctAnswer:
-    print('done')
-else:
-    print(randomDigit1, 'times', randomDigit2, 'is not', userAnswer, ", please try again:")
- 
-
-
-
-
-
-
-
-
-
-
+def generateRan():
+    randomDigit1 = random.randint(1,9)
+    randomDigit2 = random.randint(1,9)
+    correctAnswer = randomDigit1 * randomDigit2
+    userAnswer = int(input(f'How much is {randomDigit1} times {randomDigit2} ?'))
+    if userAnswer == correctAnswer:
+        print('done')
+    else:
+        print(randomDigit1, 'times', randomDigit2, 'is not', userAnswer, ", please try again:")
+generateRan()    
